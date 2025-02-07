@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAVENT Webhooks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1328089309399486646/1337159134742708284/91e079ec8dd1947807569097200f5551.png?ex=67a66dfc&is=67a51c7c&hm=574b9418b4af9db91f7b80c679fa2c46d161baef972191089bb2d8e3bcb602bf&" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-title">إرسال إيمبد إلى ديسكورد</h1>
+        
+        <label for="webhook">اختر الويبهوك:</label>
+        <select id="webhook">
+            <option value="webhook1">الكوانين</option>
+            <option value="webhook2">ويبهوك 2</option>
+        </select>
+        
+        <label for="embedName">اسم الإيمبد:</label>
+        <input type="text" id="embedName" placeholder="أدخل اسم الإيمبد">
+        
+        <label for="embedTopic">موضوع الإيمبد:</label>
+        <textarea id="embedTopic" placeholder="أدخل الموضوع..."></textarea>
+        
+        <div class="effects">
+            <button onclick="applyEffect('bold')">بولد</button>
+            <button onclick="applyEffect('blur')">تظليل</button>
+        </div>
+        
+        <label for="logoURL">رابط اللوجو بجانب الاسم (اختياري):</label>
+        <input type="text" id="logoURL" placeholder="أدخل رابط اللوجو">
+
+        <label for="footerLogoURL">رابط اللوجو أسفل الإيمبد (اختياري):</label>
+        <input type="text" id="footerLogoURL" placeholder="أدخل رابط اللوجو أسفل الإيمبد">
+        
+        <label for="bannerURL">رابط البنر (اختياري):</label>
+        <input type="text" id="bannerURL" placeholder="أدخل رابط البنر">
+
+        <label for="endMessage">رسالة النهاية:</label>
+        <input type="text" id="endMessage" placeholder="أدخل رسالة النهاية">
+
+        <label for="endLogoURL">رابط لوجو النهاية (اختياري):</label>
+        <input type="text" id="endLogoURL" placeholder="أدخل رابط لوجو النهاية">
+        
+        <label for="color">اختر لون الإيمبد:</label>
+        <input type="color" id="color">
+        
+        <button id="send" onclick="sendEmbed()">إرسال</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
